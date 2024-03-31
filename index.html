@@ -4,7 +4,183 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ayaka Rest ApiS</title>
-<link rel="stylesheet" href="style.css" />
+<style>
+    * {
+  box-sizing: border-box;
+  background-color: #000;
+  color: #fff;
+}
+
+body,
+p {
+  margin: 0;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+}
+
+.card {
+  width: 90%;
+  max-width: 340px;
+  border-radius: 75px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+
+  text-align: center;
+}
+
+.card__media {
+  position: relative;
+
+  display: grid;
+  place-items: center;
+
+  height: 250px;
+  margin-bottom: 1rem;
+  background-image: url('Y2meta.gif');
+}
+
+.card__image {
+  margin-top: 100px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.card__wave {
+  position: absolute;
+  top: 100%;
+
+  height: 24px;
+  width: 100%;
+}
+
+.card__body {
+  padding: 2.5rem;
+}
+.card__head {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.card__subhead {
+  opacity: 0.75;
+}
+
+.card__actions {
+  display: flex;
+  justify-content: center;
+}
+
+.card__actions span {
+  font-size: 20px;
+  letter-spacing: 1.20rem;
+}
+
+.card__link {
+  padding: 1.5rem;
+  font-size: 20px;
+  transition: color 0.2s ease;
+}
+
+.card__link:hover {
+  cursor: pointer;
+  color: #ff1744;
+}
+
+.border--pjg {
+  color: white;
+  border: 1px solid white;
+  width: 150px;
+  height: 50px;
+  bottom: 100px;
+}
+
+.card__brdr {
+  border-left: 10px solid #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  top: 50%;
+}
+
+.card__brdr b {
+  color: #7b7b7b;
+}
+
+.card__brdr .emot {
+  position: absolute;
+  top: 55.4%;
+  left: 38%;
+}
+
+.musik span {
+  position: fixed;
+  font-size: 45px;
+  top: 62.5%;
+  left: 35%;
+  letter-spacing: 2rem;
+  color: #09841e;
+}
+.footer p {
+  color: #fff;
+}
+@media only screen and (max-width: 480px) {
+  .card {
+    width: 100%;
+    max-width: 340px;
+    border-radius: 15px;
+  }
+  .card__image {
+    border-radius: 60px;
+    height: 100px;
+    width: 100px;
+    margin-top: 150px;
+  }
+  .card__media {
+    height: 200px;
+  }
+  .card__actions span {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  .head p {
+    font-size: 10px;
+  }
+  .card__brdr {
+  border-left: 15px solid #ccc;
+  height: 40px;
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.card__brdr a {
+  position: absolute;
+  font-size: 10px;
+  margin-bottom: 200%;
+}
+.card__brdr a b {
+  display: none;
+}
+.card__brdr b {
+  color: #7b7b7b;
+}
+.footer {
+  font-size: 10px;
+}
+    }
+</style>
 </head>
 <body>
     <div class="card">
