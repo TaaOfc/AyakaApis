@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const axios = require('axios');
-const {fetchJson, getBuffer} = require('/lib/myfunc.js');
+const {fetchJson, getBuffer} = require('./lib/myfunc.js');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
