@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const axios = require('axios');
+const {fetchJson, getBuffer} = require('/lib/myfunc.js');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -179,6 +180,18 @@ app.get('/api/blackboxAIChat', async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+
+// Anime
+app.get('/api/waifu', async (req, res, next) => {
+	let ra = await fetchJson('https://raw.githubusercontent.com/TaaOfc/waifu/main/waifu.json')
+	let ha = ra[Math.floor(Math.random() * ra.length)]
+  res.json({
+	status: true,
+	creator: `Okta`,
+	result: ha
+})
+
+})
 
 // Handle 404 error
 app.use((req, res, next) => {
